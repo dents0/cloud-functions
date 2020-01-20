@@ -4,7 +4,7 @@ GCP Cloud Functions collection
 
 **Author:** Deniss Tsokarev
 
-**License:** *see [LICENSE.TXT](https://github.com/dents0/cloud-functions/blob/master/LICENSE.txt)*
+**License:** *see [LICENSE.txt](https://github.com/dents0/cloud-functions/blob/master/LICENSE.txt)*
 
 
 Description
