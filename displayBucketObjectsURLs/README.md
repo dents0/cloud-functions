@@ -1,6 +1,6 @@
 Description
 ---
-Displays the URLs of the objects stored in the bucket.
+Displays the URLs of the objects stored in the bucket specified in the request.
 
 How to call
 ---
