@@ -1,6 +1,6 @@
 Description
 ---
-Returns an array with the URLs of the objects stored in the bucket.
+Returns an array with the URLs of the objects stored in the bucket specified in the request.
 
 How to call
 ---
