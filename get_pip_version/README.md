@@ -1,1 +1,3 @@
-Returns the version of PIP used in the Cloud Functions environment
+Description
+---
+Returns the version of PIP used in the Cloud Functions environment.
