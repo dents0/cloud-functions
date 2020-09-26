@@ -1,6 +1,6 @@
 Description
 ---
-Copies files from the bucket given in the request into the defined bucket.
+Copies files from the bucket given in the request into the bucked defined in the function.
 
 How to call
 ---
