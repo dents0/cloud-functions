@@ -2,6 +2,8 @@ Description
 ---
 Returns the size of a bucket in bytes.
 
+An equivalent of the `gsutil du -s gs://[BUCKET_NAME]/` command.
+
 How to call
 ---
 Use the **trigger URL** passing the name of the bucket: `<trigger-URL>/?bucket=<name-of-the-bucket>`. 
