@@ -1,0 +1,1 @@
+This function is triggered by uploading / updating a '.csv' file in a GCS bucket.
