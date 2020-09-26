@@ -4,7 +4,7 @@ Description
 
 How to call
 ---
-Use the **trigger URL**. You can passing the *name* of a person and specifying one of the available languages: `<trigger-URL>/?name=<optional-name>&lang=<optional-language>`. 
+Use the **trigger URL**. You can pass the *name* of a person and specifying one of the available languages: `<trigger-URL>/?name=<optional-name>&lang=<optional-language>`. 
 
 **Available languages**:
 - Engilsh - `en`
@@ -13,4 +13,4 @@ Use the **trigger URL**. You can passing the *name* of a person and specifying o
 - Romanian - `ro`
 - Russian - `ru`
 
-The default language is *Klingon*.
+*The default language is Klingon*.
