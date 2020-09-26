@@ -1,0 +1,1 @@
+Returns an array with the URLs of the objects stored in the bucket.

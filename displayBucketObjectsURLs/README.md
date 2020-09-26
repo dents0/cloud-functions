@@ -1,0 +1,1 @@
+Displays the URLs of the objects stored in the bucket.

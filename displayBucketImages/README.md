@@ -1,0 +1,1 @@
+Displays the images located in the bucket specified in the request.
