@@ -11,6 +11,8 @@ Description
 ---
  - [**copy_bucket_files**](https://github.com/dents0/cloud-functions/tree/master/copy_bucket_files) - 
  copies files from the bucket given in the request into the bucked defined in the function.
+ 
+ - [**csv_to_xlsx**](https://github.com/dents0/cloud-functions/tree/master/csv_to_xlsx) - function that converts *.csv* files to *.xlsx*; triggered by GCS *Finalize/Create* event.
 
  - [**displayBucketImages**](https://github.com/dents0/cloud-functions/tree/master/displayBucketImages) - 
  displays the images located in the bucket specified in the request.
