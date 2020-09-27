@@ -10,20 +10,24 @@ def to_xlsx(event, context):
     An '.xlsx' file with the same name will appear in the specified bucket.
     """
 
-    # Check if the uploaded file has '.txt' format
-    if event['name'][-4:] != ".csv":
-        print("Wrong file provided: provided file must have '.csv' extension")
-        return ""
+    # When triggered by '.xlsx' file creation.
+    if event['name'][-5:] == ".xlsx":
+        return
+    # Check if the uploaded file has '.csv' format.
+    elif event['name'][-4:] != ".csv":
+        print("Wrong file provided: {}. Provided file must have '.csv' extension".format(event['name']))
+        return
+    # CSV file has been uploaded.
+    else:
+        # Instantiate a storage client
+        storage_client = storage.Client()
+        bucket = storage_client.get_bucket(event['bucket'])
 
+        with open('/tmp/{}.xlsx'.format(event['name'][:-4]), 'w'):
+            read_file = pd.read_csv("gs://{}/{}".format(event['bucket'], event['name']))
+            read_file.to_excel('/tmp/{}.xlsx'.format(event['name'][:-4]), index = None, header=True)
+            result = bucket.blob('{}.xlsx'.format(event['name'][:-4]))
+            result.upload_from_filename('/tmp/{}.xlsx'.format(event['name'][:-4]))
 
-    # Instantiate a storage client
-    storage_client = storage.Client()
-    bucket = storage_client.get_bucket(event['bucket'])
-    blob = bucket.get_blob(event['name'])
-
-
-    with open('/tmp/result.xlsx', 'w') as out:
-        read_file = pd.read_csv(event['name'])
-        out.write(read_file.to_excel('/tmp/result.xlsx', index = None, header=True))
-        result = 'result.xlsx'
-        result.upload_from_filename('/tmp/result.xlsx')
+        print("File {}.xlsx created.".format(event['name'][:-4]))
+        return
