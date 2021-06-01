@@ -7,6 +7,8 @@ project_id = 'PROJECT_ID'
 topic_id = 'PUB_SUB_TOPIC_ID'  # Taken from 'projects/PROJECT_ID/topics/TOPIC_ID'
 
 
+# Initiating publisher client using the JSON key from a service account
+# with the predefined Pub/Sub Publisher role.
 publisher = pubsub_v1.PublisherClient.from_service_account_json('key.json')
 topic_path = publisher.topic_path(project_id, topic_id)
 

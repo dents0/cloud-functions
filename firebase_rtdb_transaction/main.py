@@ -16,12 +16,12 @@ def rtdb_transaction(event, context):
 
     if not firebase_admin._apps:
         firebase_admin.initialize_app(cred, {
-            'databaseURL': 'MY_FIRESTORE_RTDB_URL'
+            'databaseURL': 'MY_FIREBASE_RTDB_URL'
         })
     else:
         firebase_admin.get_app()
 
-    # As an admin, the app has access to read and write all data, regradless of Security Rules
+    # As an admin, the app has access to read and write all data, regardless of Security Rules
     ref = db.reference('counter')
 
     ref.transaction(increment_count)
